@@ -1,8 +1,10 @@
 {
-  "name":"sp-talkies",
-  "version":"3.0.0",
-  "private":true,
-  "engines":{"node":">=24 <27"},
-  "scripts":{"start":"node server.js"},
-  "dependencies":{"express":"^5.1.0","express-session":"^1.18.2","multer":"^2.0.2"}
+  "name": "sp-talkies-node24-demo",
+  "version": "2.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "24.x"
+  }
 }
