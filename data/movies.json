@@ -1,0 +1,6 @@
+[
+  {"id":1,"title":"Monsoon Letters","year":2026,"genre":"Drama","category":"Films","description":"A heartfelt story of memories, family and second chances.","poster":"https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1400&q=85","trailer":"","featured":true},
+  {"id":2,"title":"After the Rain","year":2025,"genre":"Romance","category":"Films","description":"Two lives cross paths when a city waits for the rain to end.","poster":"https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1400&q=85","trailer":"","featured":true},
+  {"id":3,"title":"Midnight Run","year":2025,"genre":"Thriller","category":"Films","description":"One night. One secret. One impossible choice.","poster":"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85","trailer":"","featured":false},
+  {"id":4,"title":"The Last Melody","year":2024,"genre":"Music","category":"Music","description":"A musician returns to the stage to finish a song left unfinished.","poster":"https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1400&q=85","trailer":"","featured":false}
+]
