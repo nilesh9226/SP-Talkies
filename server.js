@@ -90,7 +90,7 @@ const session=require("express-session");
 const multer=require("multer");
 const fs=require("fs");
 
-const app=express();
+
 const PORT=process.env.PORT||3000;
 const DATA=path.join(__dirname,"data");
 const FILE=path.join(DATA,"movies.json");
