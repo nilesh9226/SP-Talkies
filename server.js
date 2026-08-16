@@ -91,7 +91,7 @@ const multer=require("multer");
 const fs=require("fs");
 
 
-const PORT=process.env.PORT||3000;
+
 const DATA=path.join(__dirname,"data");
 const FILE=path.join(DATA,"movies.json");
 const UPLOAD=path.join(__dirname,"public","uploads");
