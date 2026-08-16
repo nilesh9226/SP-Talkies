@@ -1,3 +1,90 @@
+const express = require("express");
+const path = require("path");
+const cors = require("cors");
+
+const app = express();
+
+// ===============================
+// Middleware
+// ===============================
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// ===============================
+// Static website files
+// ===============================
+const publicPath = path.join(__dirname, "public");
+
+app.use(express.static(publicPath));
+
+// ===============================
+// Health check
+// ===============================
+app.get("/api/health", (req, res) => {
+    res.json({
+        success: true,
+        message: "SP Talkies server is running",
+        node: process.version
+    });
+});
+
+// ===============================
+// Website API example
+// ===============================
+app.get("/api/status", (req, res) => {
+    res.json({
+        success: true,
+        website: "SP Talkies",
+        status: "online"
+    });
+});
+
+// ===============================
+// SPA / Frontend fallback
+// IMPORTANT:
+// Express 5 does NOT support app.get("*")
+// ===============================
+app.use((req, res, next) => {
+    if (req.method !== "GET") {
+        return next();
+    }
+
+    // Don't redirect API requests to index.html
+    if (req.path.startsWith("/api/")) {
+        return res.status(404).json({
+            success: false,
+            message: "API endpoint not found"
+        });
+    }
+
+    res.sendFile(path.join(publicPath, "index.html"));
+});
+
+// ===============================
+// Error handler
+// ===============================
+app.use((err, req, res, next) => {
+    console.error(err);
+
+    res.status(500).json({
+        success: false,
+        message: "Internal server error"
+    });
+});
+
+// ===============================
+// Render PORT
+// ===============================
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`SP Talkies server running on port ${PORT}`);
+});
+
+
+
+
 const express=require("express");
 const session=require("express-session");
 const multer=require("multer");
