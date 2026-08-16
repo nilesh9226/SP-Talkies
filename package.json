@@ -1,5 +1,16 @@
 {
+  "name": "sp-talkies",
+  "version": "2.0.0",
+  "description": "SP Talkies - Cinematic Film Production Website with Admin Panel",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
   }
 }
