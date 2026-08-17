@@ -16,8 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 // Static website files
 // ===============================
 const publicPath = path.join(__dirname, "public");
+const imagesPath = path.join(__dirname, "Images");
 
 app.use(express.static(publicPath));
+app.use("/Images", express.static(imagesPath));
 
 // ===============================
 // Health check
